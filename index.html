@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Instagram Feed</title>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://www.instagram.com/">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <div>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#create-post">Create a new post</button>
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div>
+          </div>
+          <div class="modal" tabindex="-1" id="create-post">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Create a new post</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Caption:</label>
+                        <textarea class="form-control mb-2" id="caption" rows="2" placeholder="Add the caption of your post here"></textarea>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+                <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </nav>
+      <ul class="nav nav-underline mb-3 justify-content-center" id="insta-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="images-tab" data-bs-toggle="tab" data-bs-target="#images" type="button" role="tab" aria-controls="images-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts" type="button" role="tab" aria-controls="posts-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="images" role="tabpanel" aria-labelledby="images-tab" tabindex="0">
+          <div class="card-group">
+            <div class="card m-1">
+              <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://upload.wikimedia.org/wikipedia/commons/5/55/O_Porto_%28visto_da_Ponte_Dom_Luis_I%29.jpg" alt="Porto">
+            </div>
+            <div class="card m-1">
+              <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://live-production.wcms.abc-cdn.net.au/c94e3d74f9a8a28baa3f77ae1b0d6a40?impolicy=wcms_crop_resize&cropH=1080&cropW=1920&xPos=0&yPos=98&width=862&height=485" alt="Pigeons Love">
+            </div>
+            <div class="card m-1">
+              <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://hips.hearstapps.com/hmg-prod/images/elle-fin-de-semana-en-roma-1642526556.jpg?resize=2048:*" alt="Roma">
+            </div>
+          </div>
+        <div class="card-group">
+          <div class="card m-1">
+            <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://cdn.dogsplanet.com/wp-content/uploads/2023/04/labrador-negro-con-un-palo-en-la-boca.jpg.webp" alt="People Drinking Coffee">
+          </div>
+          <div class="card m-1">
+            <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bridge and Lake">
+          </div>
+          <div class="card m-1">
+            <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Crowned Birds">
+          </div>
+        </div>
+      <div class="card-group">
+        <div class="card m-1">
+          <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://images.pexels.com/photos/460775/pexels-photo-460775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Squirrel">
+        </div>
+        <div class="card m-1">
+          <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://images.pexels.com/photos/298246/pexels-photo-298246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Flowers">
+        </div>
+        <div class="card m-1">
+          <img style="aspect-ratio: 1/1; object-fit: cover;" src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mountains">
+        </div>
+      </div>
+    </div>
+        <div class="tab-pane fade" id="posts" role="tabpanel" aria-labelledby="posts-tab" tabindex="0">
+          <div class="d-flex justify-content-center">
+          <div class="d-flex flex-column col-4">
+           <div class="card mb-5">
+            <div class="card-header d-flex">
+              <h4 class="card-title col-9">The Sausage Dog</h4>
+              <span class="col-3 text-secondary text-end">08/26</span>
+            </div>
+            <img src="https://album.mediaset.es/eimg/2024/05/21/pexels-punchbrandstock-895257_f209.jpg?w=1200" class="card-img-top" alt="Dachshund">
+            <div class="card-body">
+              <p class="card-text fw-bold">204 Likes</p>
+              <p class="card-text">Look at this cutie!</p>
+            </div>
+          </div>
+          <div class="card mb-5">
+            <div class="card-header d-flex">
+              <h4 class="card-title col-9">The Power of Nature</h4>
+              <span class="col-3 text-secondary text-end">07/30</span>
+            </div>
+            <img src="https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Nature Landscape">
+            <div class="card-body">
+              <p class="card-text fw-bold">325 Likes</p>
+              <p class="card-text">Feeling reborn.</p>
+            </div>
+          </div>
+          <div class="card mb-5">
+            <div class="card-header d-flex">
+              <h4 class="card-title col-9">Coffee Time</h4>
+              <span class="col-3 text-secondary text-end">07/12</span>
+            </div>
+            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/06/06/10/istock-801396374.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp" class="card-img-top" alt="People Drinking Coffee">
+            <div class="card-body">
+              <p class="card-text fw-bold">198 Likes</p>
+              <p class="card-text">A beautiful moment with my friends.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
